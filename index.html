@@ -95,7 +95,13 @@
     <section id="kontakt" style="padding:22px 0">
       <h2>Kontakt</h2>
       <p>Unverbindlichen Pilot anfragen – wir melden uns innerhalb von 24 Stunden.</p>
-      <form id="contact" class="card" style="margin-top:12px" onsubmit="sendMail(event)">
+      <form id="contact" class="card" style="margin-top:12px" action="https://formsubmit.co/werkvision@gmail.com" method="POST">
+        <!-- FormSubmit settings -->
+        <input type="hidden" name="_subject" value="VisionWerk Anfrage" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value="https://DennisSonguer.github.io/?sent=1" />
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
         <div style="display:grid;gap:10px;grid-template-columns:1fr 1fr">
           <input name="name" placeholder="Name" required style="padding:12px;border-radius:10px;border:1px solid var(--line);background:#0f0f10;color:var(--text)">
           <input name="firma" placeholder="Firma (optional)" style="padding:12px;border-radius:10px;border:1px solid var(--line);background:#0f0f10;color:var(--text)">
@@ -122,18 +128,13 @@
   <script>
     // Jahr setzen
     document.getElementById('year').textContent = new Date().getFullYear();
-    // Mail senden via mailto
-    const RECEIVER = 'werkvision@gmail.com'; // ← hier deine Mailadresse eintragen
-    function sendMail(ev){
-      ev.preventDefault();
-      const fd = new FormData(ev.target);
-      const subject = encodeURIComponent('VisionWerk Anfrage – ' + (fd.get('thema')||''));
-      const body = encodeURIComponent(`Name: ${fd.get('name')||''}\nFirma: ${fd.get('firma')||''}\nE-Mail: ${fd.get('email')||''}\nThema: ${fd.get('thema')||''}\nNachricht:\n${fd.get('nachricht')||''}`);
-      window.location.href = `mailto:${RECEIVER}?subject=${subject}&body=${body}`;
+    // Info-Badge bei erfolgreichem Versand anzeigen
+    if(new URLSearchParams(location.search).get('sent')==='1'){
+      const n=document.createElement('div');
+      n.textContent='Danke! Ihre Nachricht wurde gesendet.';
+      n.style.cssText='position:fixed;inset:auto 16px 16px auto;background:#10b981;color:#08130e;padding:10px 14px;border-radius:10px;font:14px system-ui;z-index:50';
+      document.body.appendChild(n); setTimeout(()=>n.remove(),6000);
     }
-    // Direktmail-Link setzen
-    document.getElementById('directMail').href = 'mailto:'+RECEIVER;
-    document.getElementById('directMail').textContent = RECEIVER;
   </script>
 </body>
 </html>
