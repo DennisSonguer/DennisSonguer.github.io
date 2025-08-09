@@ -31,7 +31,7 @@
   <header>
     <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:16px">
       <div style="display:flex;align-items:center;gap:10px">
-        <div style="width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,#22d3ee,#3b82f6)"></div>
+        <img src="logo.svg" alt="VisionWerk Logo" style="width:36px;height:36px;border-radius:12px;object-fit:contain;background:linear-gradient(135deg,#22d3ee,#3b82f6)" onerror="this.style.background='linear-gradient(135deg,#22d3ee,#3b82f6)'; this.removeAttribute('src');" />
         <strong>VisionWerk</strong>
       </div>
       <nav style="display:flex;gap:16px;font-size:14px">
@@ -54,7 +54,7 @@
         </div>
         <p style="font-size:12px;margin-top:8px">Datenschutzfreundlich · Keine Cloud nötig · In Tagen statt Wochen</p>
       </div>
-      <div class="demo">Demo‑Video/GIF Platzhalter</div>
+      <div class="demo"><iframe src="https://www.youtube.com/embed/VIDEO_ID_HERE" title="YOLOv8 Demo" style="width:100%;height:100%;border:0;border-radius:16px" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
     </section>
 
     <section id="leistungen" style="padding:22px 0">
@@ -87,8 +87,8 @@
     <section id="demos" style="padding:22px 0">
       <h2>Demos</h2>
       <div class="grid g-2" style="margin-top:12px">
-        <div class="card"><strong>Live‑Zähler (Stifte)</strong><p>Echtzeit‑Zählung via Kamera‑Stream mit stabiler Logik (Linien/ROI). Video folgt.</p></div>
-        <div class="card"><strong>Unterboden‑Mock</strong><p>Positionsbasierte Schraubenkontrolle (Soll‑/Ist‑Abgleich, Start/Stop‑Marker). In Arbeit.</p></div>
+        <div class="card"><strong>Live‑Zähler</strong><p>Echtzeit‑Zählung via Kamera‑Stream mit stabiler Logik (Linien/ROI). Video folgt.</p></div>
+        <div class="card"><strong>Vollständigkeits‑Check (Positionen)</strong><p>Positionsbasierte Vollständigkeitsprüfung (Soll‑/Ist‑Abgleich, Start/Stop‑Marker). In Arbeit.</p></div>
       </div>
     </section>
 
@@ -108,7 +108,7 @@
           <a class="btn" href="#">Deckblatt (PDF) anfordern</a>
         </div>
       </form>
-      <p style="font-size:14px;margin-top:10px">Direkt per Mail: <a href="mailto:CHANGE_ME@domain.tld" id="directMail">CHANGE_ME@domain.tld</a></p>
+      <p style="font-size:14px;margin-top:10px">Direkt per Mail: <a href="mailto:werkvision@gmail.com" id="directMail">werkvision@gmail.com</a></p>
     </section>
   </main>
 
@@ -123,7 +123,7 @@
     // Jahr setzen
     document.getElementById('year').textContent = new Date().getFullYear();
     // Mail senden via mailto
-    const RECEIVER = 'CHANGE_ME@domain.tld'; // ← hier deine Mailadresse eintragen
+    const RECEIVER = 'werkvision@gmail.com'; // ← hier deine Mailadresse eintragen
     function sendMail(ev){
       ev.preventDefault();
       const fd = new FormData(ev.target);
