@@ -26,6 +26,13 @@
     footer{border-top:1px solid var(--line)}
     @media (max-width:860px){.hero{grid-template-columns:1fr}.g-3{grid-template-columns:1fr}.g-2{grid-template-columns:1fr}}
   </style>
+  <meta name="description" content="VisionWerk: KI-basierte visuelle Automatisierung. Zählen, Vollständigkeit & Qualitätsprüfung in Echtzeit – schnell, lokal (on‑premises), DSGVO-konform." />
+  <link rel="icon" href="/logo.png" sizes="any" />
+  <meta property="og:title" content="VisionWerk – Visuelle Automatisierung" />
+  <meta property="og:description" content="Zählen & Qualitätsprüfung in Echtzeit. Pilot in 5–10 Tagen. Läuft auf Wunsch vollständig lokal (on‑premises)." />
+  <meta property="og:image" content="https://DennisSonguer.github.io/logo.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://DennisSonguer.github.io" />
 </head>
 <body>
   <header>
@@ -47,7 +54,7 @@
     <section class="hero" style="padding:28px 0 12px">
       <div>
         <h1>Visuelle Automatisierung: Zählen & Qualitätsprüfung in Echtzeit</h1>
-        <p>Wir bauen YOLOv8‑basierte Lösungen, die Objekte live erkennen, zählen und Vollständigkeit prüfen – direkt am Band, Regal oder Arbeitsplatz. Auf Wunsch 100% on‑premises.</p>
+        <p>Wir bauen YOLOv8‑basierte Lösungen, die Objekte live erkennen, zählen und Vollständigkeit prüfen – direkt am Band, Regal oder Arbeitsplatz. Auf Wunsch läuft alles vollständig <strong>lokal (on‑premises)</strong>, ohne Cloud.</p>
         <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
           <a class="btn primary" href="#kontakt">Kostenlosen Pilot anfragen</a>
           <a class="btn" href="#demos">Demo ansehen</a>
@@ -116,12 +123,33 @@
       </form>
       <p style="font-size:14px;margin-top:10px">Direkt per Mail: <a href="mailto:werkvision@gmail.com" id="directMail">werkvision@gmail.com</a></p>
     </section>
-  </main>
+    <!-- Rechtliches -->
+    <section id="impressum" style="padding:22px 0">
+      <h2>Impressum</h2>
+      <div class="card" style="margin-top:12px">
+        <p><strong>Betreiber:</strong> Dennis Songuer (VisionWerk)</p>
+        <p><strong>Postanschrift:</strong> <em>Bitte ergänzen</em></p>
+        <p><strong>E‑Mail:</strong> <a href="mailto:werkvision@gmail.com">werkvision@gmail.com</a></p>
+        <p><strong>Verantwortlich i.S.d. § 5 TMG:</strong> Dennis Songuer</p>
+        <p><strong>USt‑ID/Handelsregister:</strong> <em>falls vorhanden eintragen</em></p>
+      </div>
+    </section>
 
+    <section id="datenschutz" style="padding:22px 0">
+      <h2>Datenschutzerklärung</h2>
+      <div class="card" style="margin-top:12px">
+        <p>Diese Website wird auf <strong>GitHub Pages</strong> gehostet. Beim Aufruf werden technisch notwendige Verbindungsdaten (u. a. IP‑Adresse, Zeit, User‑Agent) serverseitig verarbeitet. Wir setzen kein Tracking und keine Cookies ein.</p>
+        <p><strong>Kontaktformular:</strong> Für Nachrichten nutzen wir den Dienst <strong>FormSubmit</strong> (formularbasierter E‑Mail‑Versand). Die von Ihnen eingegebenen Daten werden zweckgebunden zur Bearbeitung Ihrer Anfrage verarbeitet und per E‑Mail an <a href="mailto:werkvision@gmail.com">werkvision@gmail.com</a> übermittelt. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Kommunikation) bzw. lit. f (berechtigtes Interesse an schneller Kontaktaufnahme). Captcha ist deaktiviert; ein Spam‑Honey‑Pot ist aktiv.</p>
+        <p><strong>Externe Medien:</strong> Das eingebettete Demo‑Video wird von einer externen Quelle geladen. Beim Abspielen können Anfragen an den Anbieter übermittelt werden.</p>
+        <p><strong>Ihre Rechte:</strong> Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit, Widerspruch. Kontakt: <a href="mailto:werkvision@gmail.com">werkvision@gmail.com</a>. Auf Wunsch schließen wir einen Auftragsverarbeitungsvertrag mit eingesetzten Dienstleistern.</p>
+        <p style="font-size:12px;color:#a8a8b3">Stand: <span id="ds-stand"></span></p>
+      </div>
+    </section>
+  </main>
   <footer>
     <div class="wrap" style="display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center">
       <div>© <span id="year"></span> VisionWerk · KI für visuelle Automatisierung</div>
-      <div style="display:flex;gap:14px"><a href="#">Impressum</a><a href="#">Datenschutz</a></div>
+      <div style="display:flex;gap:14px"><a href="#impressum">Impressum</a><a href="#datenschutz">Datenschutz</a></div>
     </div>
   </footer>
 
@@ -135,6 +163,10 @@
       n.style.cssText='position:fixed;inset:auto 16px 16px auto;background:#10b981;color:#08130e;padding:10px 14px;border-radius:10px;font:14px system-ui;z-index:50';
       document.body.appendChild(n); setTimeout(()=>n.remove(),6000);
     }
+  </script>
+  <script>
+    // Datum in Datenschutzerklärung setzen
+    document.getElementById('ds-stand').textContent = new Date().toLocaleDateString('de-DE');
   </script>
 </body>
 </html>
