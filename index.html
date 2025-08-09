@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VisionWerk – KI-Zählung & Qualitätsprüfung (YOLOv8)</title>
+  <meta name="description" content="VisionWerk: KI-basierte visuelle Automatisierung. Zählen, Vollständigkeit & Qualitätsprüfung in Echtzeit – schnell, on‑prem, DSGVO-konform." />
+  <style>
+    :root{--bg:#0b0b0c;--card:#121214;--muted:#a8a8b3;--text:#eaeaf2;--accent:#7dd3fc;--line:#232326}
+    *{box-sizing:border-box}
+    body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--text)}
+    a{color:var(--accent);text-decoration:none}
+    header{position:sticky;top:0;backdrop-filter:saturate(180%) blur(6px);background:rgba(11,11,12,.6);border-bottom:1px solid var(--line)}
+    .wrap{max-width:1000px;margin:0 auto;padding:22px}
+    .hero{display:grid;grid-template-columns:1.1fr 0.9fr;gap:28px;align-items:center}
+    h1{font-size:34px;margin:0 0 6px}
+    h2{font-size:22px;margin:0 0 10px}
+    p{margin:10px 0;color:var(--muted)}
+    .btn{display:inline-block;padding:12px 16px;border-radius:12px;border:1px solid var(--line)}
+    .btn.primary{background:#fff;color:#111;border-color:#fff}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px}
+    .grid{display:grid;gap:16px}
+    .g-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .g-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .demo{aspect-ratio:16/9;background:#0f0f12;border:1px dashed var(--line);border-radius:16px;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+    footer{border-top:1px solid var(--line)}
+    @media (max-width:860px){.hero{grid-template-columns:1fr}.g-3{grid-template-columns:1fr}.g-2{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:16px">
+      <div style="display:flex;align-items:center;gap:10px">
+        <div style="width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,#22d3ee,#3b82f6)"></div>
+        <strong>VisionWerk</strong>
+      </div>
+      <nav style="display:flex;gap:16px;font-size:14px">
+        <a href="#leistungen">Leistungen</a>
+        <a href="#demos">Demos</a>
+        <a href="#ablauf">Ablauf</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" style="padding:28px 0 12px">
+      <div>
+        <h1>Visuelle Automatisierung: Zählen & Qualitätsprüfung in Echtzeit</h1>
+        <p>Wir bauen YOLOv8‑basierte Lösungen, die Objekte live erkennen, zählen und Vollständigkeit prüfen – direkt am Band, Regal oder Arbeitsplatz. Auf Wunsch 100% on‑premises.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+          <a class="btn primary" href="#kontakt">Kostenlosen Pilot anfragen</a>
+          <a class="btn" href="#demos">Demo ansehen</a>
+        </div>
+        <p style="font-size:12px;margin-top:8px">Datenschutzfreundlich · Keine Cloud nötig · In Tagen statt Wochen</p>
+      </div>
+      <div class="demo">Demo‑Video/GIF Platzhalter</div>
+    </section>
+
+    <section id="leistungen" style="padding:22px 0">
+      <h2>Leistungen</h2>
+      <div class="grid g-3" style="margin-top:12px">
+        <div class="card">
+          <strong>Zählen & Stückprüfung</strong>
+          <p>Stifte, Schrauben, Teile – robuste Live‑Zählung (auch bei Bewegung) mit CSV‑Export & Alarmen.</p>
+        </div>
+        <div class="card">
+          <strong>Anwesenheit & Vollständigkeit</strong>
+          <p>„Fehlt Teil X?“ – positionsgenaue Kontrolle über definierte Zonen/ROIs und Soll‑Listen.</p>
+        </div>
+        <div class="card">
+          <strong>Qualitäts‑ & Sicherheitschecks</strong>
+          <p>Label‑/Deckel‑Sitz, Verpackungsfehler, PSA – DSGVO‑konform, ohne Mitarbeitertracking.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="ablauf" style="padding:22px 0">
+      <h2>So läuft ein Pilot</h2>
+      <div class="grid g-3" style="margin-top:12px">
+        <div class="card"><strong>1) Vor‑Ort‑Audit (gratis)</strong><p>30–60 Min. Analyse: Kamera, Licht, Use‑Case. Danach klarer Plan & Angebot.</p></div>
+        <div class="card"><strong>2) Pilot (5–10 Tage)</strong><p>Datensatz, Training, Demo am echten Objekt. Ergebnis: messbare Genauigkeit.</p></div>
+        <div class="card"><strong>3) Rollout & Support</strong><p>On‑prem Deployment, Dashboard & Alarme. Wartung/Feintuning inklusive.</p></div>
+      </div>
+    </section>
+
+    <section id="demos" style="padding:22px 0">
+      <h2>Demos</h2>
+      <div class="grid g-2" style="margin-top:12px">
+        <div class="card"><strong>Live‑Zähler (Stifte)</strong><p>Echtzeit‑Zählung via Kamera‑Stream mit stabiler Logik (Linien/ROI). Video folgt.</p></div>
+        <div class="card"><strong>Unterboden‑Mock</strong><p>Positionsbasierte Schraubenkontrolle (Soll‑/Ist‑Abgleich, Start/Stop‑Marker). In Arbeit.</p></div>
+      </div>
+    </section>
+
+    <section id="kontakt" style="padding:22px 0">
+      <h2>Kontakt</h2>
+      <p>Unverbindlichen Pilot anfragen – wir melden uns innerhalb von 24 Stunden.</p>
+      <form id="contact" class="card" style="margin-top:12px" onsubmit="sendMail(event)">
+        <div style="display:grid;gap:10px;grid-template-columns:1fr 1fr">
+          <input name="name" placeholder="Name" required style="padding:12px;border-radius:10px;border:1px solid var(--line);background:#0f0f10;color:var(--text)">
+          <input name="firma" placeholder="Firma (optional)" style="padding:12px;border-radius:10px;border:1px solid var(--line);background:#0f0f10;color:var(--text)">
+          <input name="email" placeholder="E‑Mail" type="email" required style="grid-column:1/-1;padding:12px;border-radius:10px;border:1px solid var(--line);background:#0f0f10;color:var(--text)">
+          <input name="thema" placeholder="Thema (z. B. Zählen, QA, Unterboden)" style="grid-column:1/-1;padding:12px;border-radius:10px;border:1px solid var(--line);background:#0f0f10;color:var(--text)">
+          <textarea name="nachricht" rows="5" placeholder="Kurz Ihr Anwendungsfall…" style="grid-column:1/-1;padding:12px;border-radius:10px;border:1px solid var(--line);background:#0f0f10;color:var(--text)"></textarea>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+          <button class="btn primary" type="submit">Nachricht senden</button>
+          <a class="btn" href="#">Deckblatt (PDF) anfordern</a>
+        </div>
+      </form>
+      <p style="font-size:14px;margin-top:10px">Direkt per Mail: <a href="mailto:CHANGE_ME@domain.tld" id="directMail">CHANGE_ME@domain.tld</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap" style="display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center">
+      <div>© <span id="year"></span> VisionWerk · KI für visuelle Automatisierung</div>
+      <div style="display:flex;gap:14px"><a href="#">Impressum</a><a href="#">Datenschutz</a></div>
+    </div>
+  </footer>
+
+  <script>
+    // Jahr setzen
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Mail senden via mailto
+    const RECEIVER = 'CHANGE_ME@domain.tld'; // ← hier deine Mailadresse eintragen
+    function sendMail(ev){
+      ev.preventDefault();
+      const fd = new FormData(ev.target);
+      const subject = encodeURIComponent('VisionWerk Anfrage – ' + (fd.get('thema')||''));
+      const body = encodeURIComponent(`Name: ${fd.get('name')||''}\nFirma: ${fd.get('firma')||''}\nE-Mail: ${fd.get('email')||''}\nThema: ${fd.get('thema')||''}\nNachricht:\n${fd.get('nachricht')||''}`);
+      window.location.href = `mailto:${RECEIVER}?subject=${subject}&body=${body}`;
+    }
+    // Direktmail-Link setzen
+    document.getElementById('directMail').href = 'mailto:'+RECEIVER;
+    document.getElementById('directMail').textContent = RECEIVER;
+  </script>
+</body>
+</html>
